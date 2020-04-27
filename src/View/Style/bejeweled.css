@@ -1,0 +1,105 @@
+body{
+    font-family: "Gill Sans", sans-serif ;
+}
+
+.lightText{
+    color: lightslategray;
+}
+
+table{
+    margin: auto;
+}
+
+.info{
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.titre{
+    margin: 0px;
+}
+
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+
+#finPartie{
+    z-index: 2;
+    display: none;
+}
+
+#classement{
+    z-index: 3;
+    display: none;
+}
+
+.corpOverlay{
+    margin-left: auto;
+    margin-top: 15%;
+    margin-right: auto;
+    width: 50%;
+    height: 150px;
+    background-color: whitesmoke;
+    border-radius: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+input, input::placeholder{
+    border-radius: 5px;
+    border-width: 1px;
+    font-size: 20px;
+    background-color: #2f2e38;
+    color:whitesmoke;
+}
+
+
+#essais , #essaiTitle, #score, #scoreTitle, #niveau, #niveauTitle{
+    margin: 0px;
+}
+
+#meilleursScores{
+    display: block;
+    margin-left:  auto;
+    margin-right: 0;
+}
+
+#pause{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#credits{
+    z-index: -1;
+    position: absolute;
+    top:0px;
+    right: 0px;
+    text-align: right;
+}
+
+#nomprenom, #classe, #mail{
+    font-size: 15px;
+    margin: 0px;
+    color: #547685;
+}
+
+
+#mail{
+    color: gainsboro;
+}
+
+#conseil{
+    background-color: yellow;
+    color: black;
+    font-size: larger;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Bejeweled JAUGEY Nohan S4C1</title>
+        <link rel="icon" href="ressources/favicon.ico" />
+        <!-- Style sheets -->
+
+            <link rel="stylesheet" type="text/css" href="src/View/Style/bejeweled.css">
+
+        <!-- Modele classes -->
+            <script src="src/Model/Axe.js"></script>
+            <script src="src/Model/Sons.js"></script>
+            <script src="src/Model/Point.js"></script>
+            <script src="src/Model/Gemme.js"></script>
+            <script src="src/Model/Grille.js"></script>
+            <script src="src/Model/TypeGemme.js"></script>
+            <script src="src/Model/Chrono.js"></script>
+            <script src="src/Model/Score.js"></script>
+            <script src="src/Model/Images.js"></script>
+
+        <!-- Controller classes -->
+            <script src="src/Controller/GrilleController.js"></script>
+
+        <!-- View -->
+            <script src="src/View/Bejeweled.js"></script>
+            <script src="src/View/VueGemme.js"></script>
+
+        <!-- Bejeweled images
+            <img style="display:none ;" src="/ressources/images/bleu.png"/>
+            <img style="display:none ;" src="/ressources/images/cyan.png"/>
+            <img style="display:none ;" src="/ressources/images/orange.png"/>
+            <img style="display:none ;" src="/ressources/images/rouge.png"/>
+            <img style="display:none ;" src="/ressources/images/vert.png"/>
+            <img style="display:none ;" src="/ressources/images/violet.png"/>
+            -->
+
+
+
+    </head>
+
+    <body onload="demmarer();">
+
+        <table>
+            <thead >
+                <tr>
+                    <td colspan="3"><h1 class="titre">Bejeweled </h1></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <h3 id="scoreTitle" class="lightText info" >Score</h3>
+                        <h3 id="score" class="info"></h3>
+                    </td>
+                    <td>
+                        <h3 id="niveauTitle" class="lightText info" >Niveau</h3>
+                        <h3 id="niveau" class="info"> </h3>
+                    </td>
+                    <td>
+                        <h3 id="essaiTitle" class="lightText info" >Essais</h3>
+                        <h3 id="essais" class="info"> </h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <canvas style="display: block; padding: 0px" id="toile" class="shadow-lg col" height="800" width="800"></canvas>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <canvas id="barre" height="30" width="800"></canvas>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input  onclick="recommencer()" type="button" value="Recommencer">
+                    </td>
+                    <td>
+                        <input id="pause" type="button" onclick="pause();" value="Pause">
+                        <input id="conseil" type="button" value="Conseil" onclick="grille.hint();">
+                    </td>
+                    <td>
+                        <input id="meilleursScores" type="button" value="Meilleurs scores" onclick="afficherClassement()">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div id="finPartie" class="overlay" >
+            <form class="corpOverlay">
+                <h2 id="scoreFin">----</h2>
+                <input id="pseudo" placeholder="Entrez votre pseudo" type="text">
+                <input id="envoi" onclick="envoyerScore()" type="button" value="Envoyer">
+                <br><br>
+                <input type="button" value="Meilleurs scores" onclick="afficherClassement()">
+                <input onclick="recommencer()" type="button" value="Fermer">
+            </form>
+        </div>
+
+        <div id="classement" class="overlay">
+            <table class="corpOverlay">
+                <thead style="background-color: darkslateblue;color:white;" >
+                    <tr>
+                        <td>Rang</td>
+                        <td>Joueur</td>
+                        <td>Score</td>
+                    </tr>
+                </thead>
+                <tbody id="zoneClassement">
+                </tbody>
+                <input type="button" value="Retour" onclick="fermerClassement();">
+            </table>
+        </div>
+
+        <div id="credits">
+            <img id="imgdept" height="80" width="200" src="ressources/images/depinfo.jpg">
+            <h4 id="mail">nohan.jaugey@edu.univ-fcomte.fr</h4>
+            <h3 id="nomprenom" >JAUGEY Nohan</h3>
+            <h4 id="classe">Semestre 4 C1</h4>
+
+        </div>
+
+        <!--<script src="Bejeweled.js"></script>-->
+    </body>
+</html>
